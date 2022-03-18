@@ -45,8 +45,8 @@ const createTokenElement = ({ name, collection, description, permalink, image_pr
 document.addEventListener("DOMContentLoaded", async () => {
   let accountAddress
 
-  //accountAddress = await connect()
- accountAddress = '0X0468208364AE2F31688163449EA46A079A2F496E'
+  accountAddress = await connect()
+ //accountAddress = '0X0468208364AE2F31688163449EA46A079A2F496E'
 
   renderTokensForOwner(accountAddress)
 
