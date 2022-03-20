@@ -45,13 +45,12 @@ const createTokenElement = ({ name, collection, description, permalink, image_pr
 document.addEventListener("DOMContentLoaded", async () => {
   let accountAddress
 
-  accountAddress = await connect()
- //accountAddress = '0X0468208364AE2F31688163449EA46A079A2F496E'
-
+  //accountAddress = await connect()
+  accountAddress = "0xe21dc18513e3e68a52f9fcdacfd56948d43a11c6"
   renderTokensForOwner(accountAddress)
 
   window.ethereum.on("accountsChanged", async () => {
-    accountAddress = await connect()
+    accountAddress = "0xe21dc18513e3e68a52f9fcdacfd56948d43a11c6"
     document.getElementById("container").innerHTML = ""
     renderTokensForOwner(accountAddress)
   })
